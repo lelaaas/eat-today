@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EAT TODAY — Tvoj frižider zna šta ćeš jesti danas</title>
+<meta name="description" content="EAT TODAY koristi AI da pretvori sastojke koje već imaš u ukusne, personalizovane obroke. Slikaj frižider — AI prepoznaje — jedeš danas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥑</text></svg>">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner container">
+    <a href="#hero" class="logo" aria-label="EAT TODAY — početna">
+      <span class="logo-mark">🥑</span>
+      <span class="logo-text">EAT<em>TODAY</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Glavna navigacija">
+      <a href="#demo">Kako radi</a>
+      <a href="#why">Funkcije</a>
+      <a href="#for-you">Za tebe</a>
+      <a href="#premium">Premium</a>
+      <a href="#about">O nama</a>
+      <a href="#final-cta" class="btn btn-primary btn-sm nav-cta">Započni</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Otvori meni" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- 1. HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-blob blob-1"></div>
+  <div class="hero-bg-blob blob-2"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-badge reveal">
+        <span class="pulse-dot"></span> Novo · AI aplikacija za planiranje obroka
+      </div>
+      <h1 class="reveal delay-1">Tvoj frižider zna više obroka<br>nego što&nbsp;<span class="highlight">misliš.</span></h1>
+      <p class="hero-sub reveal delay-2">EAT TODAY koristi AI da pretvori sastojke koje već imaš u ukusne, personalizovane obroke.</p>
+      <div class="hero-ctas reveal delay-3">
+        <a href="#final-cta" class="btn btn-primary btn-lg">Isprobaj EAT TODAY</a>
+        <a href="#demo" class="btn btn-ghost btn-lg">Pogledaj kako radi <span class="arrow">↓</span></a>
+      </div>
+      <div class="hero-flow reveal delay-4" aria-label="Kako to funkcioniše">
+        <div class="flow-chip">📸 Slika frižidera</div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-chip flow-chip-ai">🤖 AI</div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-chip flow-chip-meal">🍽️ Obrok</div>
+      </div>
+    </div>
+    <div class="hero-phone-wrap reveal delay-2">
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="app-header">
+            <div>
+              <p class="app-greet">Dobar dan 👋</p>
+              <p class="app-question">Šta ćeš jesti danas?</p>
+            </div>
+            <div class="app-avatar">M</div>
+          </div>
+          <div class="app-scan-card">
+            <div class="scan-preview">
+              <div class="scan-img"></div>
+              <div class="scan-line"></div>
+            </div>
+            <p class="scan-label">Skeniraj frižider</p>
+            <p class="scan-sub">2 sastojka čekaju na prepoznavanje</p>
+            <div class="scan-btn">📷 Novo skeniranje</div>
+          </div>
+          <p class="app-section-title">Predlozi za tebe</p>
+          <div class="app-recipe-mini">
+            <div class="app-recipe-thumb thumb-1"></div>
+            <div class="app-recipe-info">
+              <p class="app-recipe-name">Tost sa avokadom i jajetom</p>
+              <p class="app-recipe-meta">15 min · 320 kcal · <span class="match">92% sastojaka</span></p>
+            </div>
+          </div>
+          <div class="app-recipe-mini">
+            <div class="app-recipe-thumb thumb-2"></div>
+            <div class="app-recipe-info">
+              <p class="app-recipe-name">Kremasta pasta sa piletinom</p>
+              <p class="app-recipe-meta">25 min · 540 kcal · <span class="match">85% sastojaka</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="float-tag tag-a glass">🍅 Paradajz <b>✓</b></div>
+      <div class="float-tag tag-b glass">🥚 Jaja <b>✓</b></div>
+      <div class="float-tag tag-c glass">✨ AI prepoznavanje</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. INTERACTIVE DEMO -->
+<section class="demo" id="demo">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Interaktivna demonstracija</span>
+      <h2>Od frižidera do tanjira —<br>za nekoliko sekundi.</h2>
+      <p>Klikni kroz sve ekrane ili listaj strelicama. Ovako radi EAT TODAY.</p>
+    </div>
+
+    <div class="demo-shell glass" id="demoShell">
+      <div class="demo-topbar">
+        <div class="demo-dots" id="demoDots" role="tablist" aria-label="Ekrani demonstracije">
+          <button class="demo-dot active" data-screen="0" role="tab" aria-selected="true" aria-label="Ekran 1 — Tvoj frižider">1</button>
+          <button class="demo-dot" data-screen="1" role="tab" aria-selected="false" aria-label="Ekran 2 — AI prepoznavanje">2</button>
+          <button class="demo-dot" data-screen="2" role="tab" aria-selected="false" aria-label="Ekran 3 — Tvoj obrok">3</button>
+          <button class="demo-dot" data-screen="3" role="tab" aria-selected="false" aria-label="Ekran 4 — Nedeljni plan">4</button>
+          <button class="demo-dot" data-screen="4" role="tab" aria-selected="false" aria-label="Ekran 5 — Pametna lista">5</button>
+          <button class="demo-dot" data-screen="5" role="tab" aria-selected="false" aria-label="Ekran 6 — Nutricija">6</button>
+        </div>
+        <div class="demo-arrows">
+          <button class="demo-arrow" id="demoPrev" aria-label="Prethodni ekran">←</button>
+          <button class="demo-arrow" id="demoNext" aria-label="Sledeći ekran">→</button>
+        </div>
+      </div>
+
+      <div class="demo-stage" id="demoStage">
+
+        <!-- SCREEN 1 -->
+        <div class="demo-screen active" data-screen="0">
+          <div class="demo-grid">
+            <div class="demo-copy">
+              <span class="screen-step">Korak 1</span>
+              <h3>Šta ima u tvom frižideru?</h3>
+              <p>Slikaj sadržaj frižidera i pusti AI da uradi ostalo.</p>
+              <button class="btn btn-primary" id="scanBtn">📷 Skeniraj moj frižider</button>
+            </div>
+            <div class="demo-visual">
+              <div class="fridge">
+                <div class="fridge-door">
+                  <div class="fridge-handle"></div>
+                  <div class="fridge-shelf">
+                    <span class="food-item" style="--d:0s">🍅</span><span class="food-item" style="--d:.1s">🥬</span><span class="food-item" style="--d:.2s">🥑</span>
+                  </div>
+                  <div class="fridge-shelf">
+                    <span class="food-item" style="--d:.3s">🧀</span><span class="food-item" style="--d:.4s">🥚</span><span class="food-item" style="--d:.5s">🍗</span>
+                  </div>
+                  <div class="fridge-shelf">
+                    <span class="food-item" style="--d:.6s">🥕</span><span class="food-item" style="--d:.7s">🥛</span><span class="food-item" style="--d:.8s">🫑</span>
+                  </div>
+                </div>
+                <div class="scan-beam" id="scanBeam"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREEN 2 -->
+        <div class="demo-screen" data-screen="1">
+          <div class="demo-grid">
+            <div class="demo-copy">
+              <span class="screen-step">Korak 2</span>
+              <h3>AI zna šta je unutra.</h3>
+              <p>Tvoji sastojci su automatski prepoznati za nekoliko sekundi. Bez kucanja, bez listi.</p>
+              <div class="ai-status glass"><span class="ai-spinner"></span> Analiza slike u toku… <b>98%</b></div>
+            </div>
+            <div class="demo-visual">
+              <div class="scan-frame">
+                <div class="scan-photo"></div>
+                <div class="scan-corners"><i></i><i></i><i></i><i></i></div>
+                <div class="scan-laser"></div>
+                <div class="tag tag-1" style="--d:.2s">🍅 Paradajz</div>
+                <div class="tag tag-2" style="--d:.5s">🥚 Jaja</div>
+                <div class="tag tag-3" style="--d:.8s">🥑 Avokado</div>
+                <div class="tag tag-4" style="--d:1.1s">🍗 Piletina</div>
+                <div class="tag tag-5" style="--d:1.4s">🧀 Sir</div>
+                <div class="tag tag-6" style="--d:1.7s">🥬 Spanać</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREEN 3 -->
+        <div class="demo-screen" data-screen="2">
+          <div class="demo-grid">
+            <div class="demo-copy">
+              <span class="screen-step">Korak 3</span>
+              <h3>Sada napravimo nešto ukusno.</h3>
+              <p>Na osnovu tvojih sastojaka, AI predlaže recepte koje možeš odmah da spremiti.</p>
+            </div>
+            <div class="demo-visual demo-visual-wide">
+              <div class="recipe-cards">
+                <article class="recipe-card">
+                  <div class="recipe-img img-pasta"></div>
+                  <div class="recipe-body">
+                    <h4>Kremasta pasta sa piletinom</h4>
+                    <div class="recipe-meta"><span>⏱ 25 min</span><span>🔥 540 kcal</span><span>📊 Srednje</span></div>
+                    <p class="recipe-ing"><b class="ok">✓ Imaš:</b> piletina, parmezan, spanać</p>
+                    <p class="recipe-ing"><b class="miss">✗ Fali:</b> pavlaka</p>
+                    <button class="btn btn-outline btn-sm">Pogledaj recept</button>
+                  </div>
+                </article>
+                <article class="recipe-card">
+                  <div class="recipe-img img-toast"></div>
+                  <div class="recipe-body">
+                    <h4>Tost sa avokadom i jajetom</h4>
+                    <div class="recipe-meta"><span>⏱ 15 min</span><span>🔥 320 kcal</span><span>📊 Lako</span></div>
+                    <p class="recipe-ing"><b class="ok">✓ Imaš:</b> avokado, jaja, hleb</p>
+                    <p class="recipe-ing"><b class="ok2">✓ Sve imaš!</b></p>
+                    <button class="btn btn-outline btn-sm">Pogledaj recept</button>
+                  </div>
+                </article>
+                <article class="recipe-card">
+                  <div class="recipe-img img-bowl"></div>
+                  <div class="recipe-body">
+                    <h4>Mediteranska činija sa piletinom</h4>
+                    <div class="recipe-meta"><span>⏱ 30 min</span><span>🔥 460 kcal</span><span>📊 Srednje</span></div>
+                    <p class="recipe-ing"><b class="ok">✓ Imaš:</b> piletina, paradajz, avokado</p>
+                    <p class="recipe-ing"><b class="miss">✗ Fali:</b> masline</p>
+                    <button class="btn btn-outline btn-sm">Pogledaj recept</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREEN 4 -->
+        <div class="demo-screen" data-screen="3">
+          <div class="demo-grid">
+            <div class="demo-copy">
+              <span class="screen-step">Korak 4</span>
+              <h3>Tvoja nedelja. Planirana.</h3>
+              <p>EAT TODAY sastavlja ceo nedeljni plan obroka — doručak, ručak i večera, balansirano i bez trošenja vremena.</p>
+            </div>
+            <div class="demo-visual demo-visual-wide">
+              <div class="week-plan">
+                <div class="week-row week-head"><span>Dan</span><span>🌅 Doručak</span><span>☀️ Ručak</span><span>🌙 Večera</span><span>Kcal</span></div>
+                <div class="week-row"><span class="day">Pon</span><span>Ovsena kaša</span><span>Piletina salata</span><span>Pasta</span><span>1.540</span></div>
+                <div class="week-row"><span class="day">Uto</span><span>Jogurt + voće</span><span>Tost avokado</span><span>Riža sa povrćem</span><span>1.480</span></div>
+                <div class="week-row highlight-row"><span class="day">Sre</span><span>Omlet</span><span>Mediteranska činija</span><span>Krem supa</span><span>1.610</span></div>
+                <div class="week-row"><span class="day">Čet</span><span>Smoothie bowl</span><span>Wrap sa piletinom</span><span>Losos + spanać</span><span>1.570</span></div>
+                <div class="week-row"><span class="day">Pet</span><span>Tost + jaje</span><span>Pasta sa spanaćem</span><span>Piletina na žaru</span><span>1.520</span></div>
+                <div class="week-row"><span class="day">Sub</span><span>Palačinke</span><span>Gril povrće + sir</span><span>Čorba + hleb</span><span>1.650</span></div>
+                <div class="week-row"><span class="day">Ned</span><span>Jaja na oko</span><span>Piletina + riža</span><span>Salata sa tunom</span><span>1.490</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREEN 5 -->
+        <div class="demo-screen" data-screen="4">
+          <div class="demo-grid">
+            <div class="demo-copy">
+              <span class="screen-step">Korak 5</span>
+              <h3>Kupuj samo ono što ti treba.</h3>
+              <p>EAT TODAY upoređuje tvoje sastojke sa izabranim receptima i pravi pametnu listu za kupovinu. Ništa viška, ništa manjka.</p>
+            </div>
+            <div class="demo-visual">
+              <div class="shopping-card glass">
+                <div class="shop-head">🛒 Lista za kupovinu <span class="shop-badge">4 proizvoda</span></div>
+                <label class="shop-item"><input type="checkbox" checked> <span>🥛 Mleko</span> <em>za pastu</em></label>
+                <label class="shop-item"><input type="checkbox"> <span>🍚 Pirinač</span> <em>za činiju</em></label>
+                <label class="shop-item"><input type="checkbox"> <span>🫒 Maslinovo ulje</span> <em>za salatu</em></label>
+                <label class="shop-item"><input type="checkbox" checked> <span>🧀 Parmezan</span> <em>za pastu</em></label>
+                <div class="shop-foot">💡 Sve ostalo već imaš u frižideru</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCREEN 6 -->
+        <div class="demo-screen" data-screen="5">
+          <div class="demo-grid">
+            <div class="demo-copy">
+              <span class="screen-step">Korak 6</span>
+              <h3>Jedi pametnije, ne teže.</h3>
+              <p>Svaki obrok i ceo dan praćeni su kroz pregledan nutricionistički prikaz. Bez tablica i računanja.</p>
+            </div>
+            <div class="demo-visual">
+              <div class="nutrition-card glass">
+                <div class="nutrition-top">
+                  <div class="score-ring">
+                    <svg viewBox="0 0 120 120">
+                      <circle class="ring-bg" cx="60" cy="60" r="52"/>
+                      <circle class="ring-fg" cx="60" cy="60" r="52" id="scoreRing"/>
+                    </svg>
+                    <div class="ring-label"><b>8.6</b><span>nutri skor</span></div>
+                  </div>
+                  <div class="cal-block">
+                    <p class="cal-num"><span class="counter" data-target="1840">0</span></p>
+                    <p class="cal-lab">kcal danas</p>
+                  </div>
+                </div>
+                <div class="macro">
+                  <div class="macro-row"><span>🥩 Proteini</span><div class="bar"><i data-w="72%" style="--w:72%"></i></div><b>112 g</b></div>
+                  <div class="macro-row"><span>🌾 Ugljeni hidrati</span><div class="bar"><i class="bar-y" data-w="58%" style="--w:58%"></i></div><b>190 g</b></div>
+                  <div class="macro-row"><span>🥑 Masti</span><div class="bar"><i class="bar-o" data-w="45%" style="--w:45%"></i></div><b>64 g</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="demo-progress"><div class="demo-progress-bar" id="demoProgress"></div></div>
+    </div>
+    <p class="demo-hint">Prevuci levo/desno na mobilnom telefonu ←→</p>
+  </div>
+</section>
+
+<!-- 3. PROBLEM -->
+<section class="problem" id="problem">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Problem</span>
+      <h2>Zvuči poznato?</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="problem-face">
+          <span class="problem-emoji">🤔</span>
+          <h3>Ne znaš šta da skuvaš?</h3>
+          <p>Sastojci postoje, inspiracija ne.</p>
+        </div>
+        <div class="solution-face">
+          <span class="problem-emoji">✨</span>
+          <h3>AI ti predlaže obroke</h3>
+          <p>Na osnovu onoga što već imaš — za nekoliko sekundi.</p>
+        </div>
+      </div>
+      <div class="problem-card reveal delay-1">
+        <div class="problem-face">
+          <span class="problem-emoji">🗑️</span>
+          <h3>Hrana se stalno baca?</h3>
+          <p>Povrće vene pre nego što ga iskoristiš.</p>
+        </div>
+        <div class="solution-face">
+          <span class="problem-emoji">🌱</span>
+          <h3>Prvo koristiš ono što imaš</h3>
+          <p>Recepti su pravljeni oko tvojih sastojaka — manje otpada.</p>
+        </div>
+      </div>
+      <div class="problem-card reveal delay-2">
+        <div class="problem-face">
+          <span class="problem-emoji">⏳</span>
+          <h3>Tražiš recepte predugo?</h3>
+          <p>Sat vremena guglanja, a večera i dalje ne postoji.</p>
+        </div>
+        <div class="solution-face">
+          <span class="problem-emoji">⚡</span>
+          <h3>Jedna slika je dovoljna</h3>
+          <p>Bez kucanja sastojaka i beskrajnog skrolovanja.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SOLUTION FLOW -->
+<section class="solution" id="about">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Rešenje</span>
+      <h2>Pet koraka do obroka</h2>
+    </div>
+    <div class="flow-steps">
+      <div class="flow-step reveal"><div class="flow-icon">📸</div><h4>Slikaj svoj frižider</h4><p>Jedna fotografija, ništa više.</p></div>
+      <div class="flow-connector reveal">↓</div>
+      <div class="flow-step reveal delay-1"><div class="flow-icon">🤖</div><h4>AI prepoznaje sastojke</h4><p>Automatski, za nekoliko sekundi.</p></div>
+      <div class="flow-connector reveal delay-1">↓</div>
+      <div class="flow-step reveal delay-2"><div class="flow-icon">🍽️</div><h4>Dobij personalizovane recepte</h4><p>Prilagođene tebi i tvom ukusu.</p></div>
+      <div class="flow-connector reveal delay-2">↓</div>
+      <div class="flow-step reveal delay-3"><div class="flow-icon">🛒</div><h4>Kupi samo ono što fali</h4><p>Pametna lista bez viška.</p></div>
+      <div class="flow-connector reveal delay-3">↓</div>
+      <div class="flow-step flow-step-final reveal delay-4"><div class="flow-icon">🌱</div><h4>Manje bacaš hranu</h4><p>Više koristiš ono što već imaš.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHY / FEATURES -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Zašto EAT TODAY?</span>
+      <h2>Pametno. Sveže. Jednostavno.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🤖</div>
+        <h3>Pokreće ga AI</h3>
+        <p>Prepoznaje sastojke iz obične fotografije frižidera.</p>
+      </div>
+      <div class="why-card reveal delay-1">
+        <div class="why-icon">🌱</div>
+        <h3>Manje otpada</h3>
+        <p>Koristi ono što već imaš, umesto da baciš hranu.</p>
+      </div>
+      <div class="why-card reveal delay-2">
+        <div class="why-icon">🎯</div>
+        <h3>Personalizovano</h3>
+        <p>Recepti i planovi obroka prilagođeni tvojim ciljevima.</p>
+      </div>
+      <div class="why-card reveal delay-3">
+        <div class="why-icon">⚡</div>
+        <h3>Jednostavno</h3>
+        <p>Bez kucanja sastojaka i beskrajnog traženja recepata.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. FOR YOU -->
+<section class="for-you" id="for-you">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Za svakoga</span>
+      <h2>Napravljeno za tvoj način života</h2>
+    </div>
+    <div class="audience-grid">
+      <div class="audience audience-students reveal">
+        <div class="audience-img img-students" role="img" aria-label="Studenti spremaju obrok"></div>
+        <div class="audience-body">
+          <span class="audience-tag">🎓 Studenti i mladi profesionalci</span>
+          <h3>Brzi, jeftini i jednostavni obroci.</h3>
+          <p>Skeniraj, skuvaj, jedeš. Idealno za male frižidere i male budžete.</p>
+        </div>
+      </div>
+      <div class="audience audience-families reveal delay-1">
+        <div class="audience-img img-families" role="img" aria-label="Porodica za trpezom"></div>
+        <div class="audience-body">
+          <span class="audience-tag">🏠 Porodice i zaposleni</span>
+          <h3>Planiraj obroke, štedi novac i smanji bacanje hrane.</h3>
+          <p>Cela nedelja isplanirana unapred — bez svakodnevnog razmišljanja „šta za večeru“.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. PRICING -->
+<section class="pricing" id="premium">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Cenovni planovi</span>
+      <h2>Besplatno za početak.<br>Premium za više.</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <span class="price-tier">Besplatno</span>
+        <p class="price-value">0 <span>RSD</span></p>
+        <p class="price-note">Zauvek besplatno</p>
+        <ul>
+          <li>✓ Osnovno AI prepoznavanje sastojaka</li>
+          <li>✓ Osnovni recepti</li>
+          <li>✓ Pametna lista za kupovinu</li>
+        </ul>
+        <a href="#final-cta" class="btn btn-outline">Započni besplatno</a>
+      </div>
+      <div class="price-card price-card-premium reveal delay-1">
+        <div class="premium-flag">Najpopularnije</div>
+        <span class="price-tier">Premium</span>
+        <p class="price-value">Uskoro <span>dostupno</span></p>
+        <p class="price-note">Cena će biti objavljena pri lansiranju</p>
+        <ul>
+          <li>✓ Personalizovani nedeljni planovi obroka</li>
+          <li>✓ Napredna analiza nutricije</li>
+          <li>✓ Napredne AI preporuke</li>
+          <li>✓ Neograničeno skeniranje</li>
+          <li>✓ Recepti prilagođeni ličnim ciljevima</li>
+        </ul>
+        <a href="#final-cta" class="btn btn-primary">Pridruži se ranom pristupu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. SUSTAINABILITY -->
+<section class="sustain" id="sustainability">
+  <div class="sustain-float">🥕</div>
+  <div class="sustain-float f2">🥬</div>
+  <div class="sustain-float f3">🍅</div>
+  <div class="sustain-float f4">🥦</div>
+  <div class="container sustain-inner">
+    <span class="kicker kicker-light">Održivost</span>
+    <h2>Manje otpada.<br>Više mogućnosti.</h2>
+    <p class="sustain-text">EAT TODAY pomaže da bolje iskoristiš sastojke koje već imaš — tako što ti predlaže obroke pre nego što hrana istekne. Manje novca u kanti za smeće, više obroka na stolu.</p>
+    <div class="sustain-chips">
+      <div class="sustain-chip glass reveal"><b>🧊</b> Prvo ono što ističe</div>
+      <div class="sustain-chip glass reveal delay-1"><b>🛒</b> Kupuješ samo ono što fali</div>
+      <div class="sustain-chip glass reveal delay-2"><b>🌱</b> Manje bacane hrane</div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. APP PREVIEW -->
+<section class="preview" id="preview">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Pregled aplikacije</span>
+      <h2>Pogledaj unutar EAT TODAY</h2>
+      <p>Klikni kroz ekrane aplikacije.</p>
+    </div>
+    <div class="preview-grid">
+      <div class="preview-tabs" id="previewTabs">
+        <button class="preview-tab active" data-app="home">🏠 Početna</button>
+        <button class="preview-tab" data-app="scanner">📷 Skeniranje</button>
+        <button class="preview-tab" data-app="ingredients">🥑 Sastojci</button>
+        <button class="preview-tab" data-app="recipes">🍽️ Recepti</button>
+        <button class="preview-tab" data-app="plan">📅 Plan obroka</button>
+        <button class="preview-tab" data-app="nutrition">📊 Nutricija</button>
+      </div>
+      <div class="preview-phone">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <!-- Home -->
+            <div class="app-view active" data-app="home">
+              <div class="app-header">
+                <div><p class="app-greet">Zdravo 👋</p><p class="app-question">Šta ćeš jesti danas?</p></div>
+                <div class="app-avatar">M</div>
+              </div>
+              <div class="app-big-card">
+                <p class="app-big-title">Tvoj frižider</p>
+                <p class="app-big-sub">6 sastojaka prepoznato</p>
+                <div class="app-big-row"><span>🍅</span><span>🥚</span><span>🥑</span><span>🍗</span><span>🧀</span><span>🥬</span></div>
+              </div>
+              <p class="app-section-title">Današnji predlozi</p>
+              <div class="app-recipe-mini"><div class="app-recipe-thumb thumb-1"></div><div><p class="app-recipe-name">Tost sa avokadom</p><p class="app-recipe-meta">15 min · 320 kcal</p></div></div>
+              <div class="app-recipe-mini"><div class="app-recipe-thumb thumb-2"></div><div><p class="app-recipe-name">Pasta sa piletinom</p><p class="app-recipe-meta">25 min · 540 kcal</p></div></div>
+            </div>
+            <!-- Scanner -->
+            <div class="app-view" data-app="scanner">
+              <div class="app-scan-view">
+                <div class="app-scan-frame">
+                  <div class="scan-img"></div>
+                  <div class="scan-line"></div>
+                  <div class="scan-corners"><i></i><i></i><i></i><i></i></div>
+                </div>
+                <p class="app-big-title">Usmeri kameru ka frižideru</p>
+                <p class="app-big-sub">AI prepoznaje sastojke automatski</p>
+                <div class="scan-btn">📷 Otvori kameru</div>
+              </div>
+            </div>
+            <!-- Ingredients -->
+            <div class="app-view" data-app="ingredients">
+              <p class="app-section-title big">Tvoji sastojci</p>
+              <p class="app-big-sub">Skenirano pre 2 sata</p>
+              <div class="ing-grid">
+                <div class="ing-item">🍅<span>Paradajz</span><em>2 dana</em></div>
+                <div class="ing-item">🥚<span>Jaja</span><em>5 dana</em></div>
+                <div class="ing-item">🥑<span>Avokado</span><em>1 dan</em></div>
+                <div class="ing-item">🍗<span>Piletina</span><em>3 dana</em></div>
+                <div class="ing-item">🧀<span>Sir</span><em>7 dana</em></div>
+                <div class="ing-item warn">🥬<span>Spanać</span><em>danas</em></div>
+              </div>
+              <div class="scan-btn ghost">＋ Dodaj ručno</div>
+            </div>
+            <!-- Recipes -->
+            <div class="app-view" data-app="recipes">
+              <p class="app-section-title big">Recepti za tebe</p>
+              <div class="app-recipe-card"><div class="app-recipe-thumb thumb-2 tall"></div><div class="app-recipe-body"><p class="app-recipe-name">Kremasta pasta sa piletinom</p><p class="app-recipe-meta">25 min · 540 kcal · Srednje</p></div></div>
+              <div class="app-recipe-card"><div class="app-recipe-thumb thumb-1 tall"></div><div class="app-recipe-body"><p class="app-recipe-name">Tost sa avokadom i jajetom</p><p class="app-recipe-meta">15 min · 320 kcal · Lako</p></div></div>
+              <div class="app-recipe-card"><div class="app-recipe-thumb thumb-3 tall"></div><div class="app-recipe-body"><p class="app-recipe-name">Mediteranska činija</p><p class="app-recipe-meta">30 min · 460 kcal · Srednje</p></div></div>
+            </div>
+            <!-- Plan -->
+            <div class="app-view" data-app="plan">
+              <p class="app-section-title big">Nedeljni plan</p>
+              <div class="plan-day"><span class="plan-day-name">Pon</span><div><p class="plan-meal">🌅 Ovsena kaša</p><p class="plan-meal">☀️ Piletina salata</p><p class="plan-meal">🌙 Pasta</p></div><b>1.540</b></div>
+              <div class="plan-day"><span class="plan-day-name">Uto</span><div><p class="plan-meal">🌅 Jogurt + voće</p><p class="plan-meal">☀️ Tost avokado</p><p class="plan-meal">🌙 Riža sa povrćem</p></div><b>1.480</b></div>
+              <div class="plan-day"><span class="plan-day-name">Sre</span><div><p class="plan-meal">🌅 Omlet</p><p class="plan-meal">☀️ Mediteranska činija</p><p class="plan-meal">🌙 Krem supa</p></div><b>1.610</b></div>
+              <div class="plan-day"><span class="plan-day-name">Čet</span><div><p class="plan-meal">🌅 Smoothie bowl</p><p class="plan-meal">☀️ Wrap sa piletinom</p><p class="plan-meal">🌙 Losos + spanać</p></div><b>1.570</b></div>
+            </div>
+            <!-- Nutrition -->
+            <div class="app-view" data-app="nutrition">
+              <p class="app-section-title big">Danas</p>
+              <div class="app-nutri-ring">
+                <svg viewBox="0 0 120 120"><circle class="ring-bg" cx="60" cy="60" r="52"/><circle class="ring-fg" cx="60" cy="60" r="52"/></svg>
+                <div class="ring-label"><b>1.840</b><span>od 2.200 kcal</span></div>
+              </div>
+              <div class="macro">
+                <div class="macro-row"><span>Proteini</span><div class="bar"><i data-w="72%" style="--w:72%"></i></div><b>112 g</b></div>
+                <div class="macro-row"><span>UH</span><div class="bar"><i class="bar-y" data-w="58%" style="--w:58%"></i></div><b>190 g</b></div>
+                <div class="macro-row"><span>Masti</span><div class="bar"><i class="bar-o" data-w="45%" style="--w:45%"></i></div><b>64 g</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. FINAL CTA -->
+<section class="final-cta" id="final-cta">
+  <div class="container">
+    <h2>Otvori frižider.<br><span class="highlight">Reci ćemo ti šta da jedeš danas.</span></h2>
+    <p>EAT TODAY — od sastojaka do obroka, uz pomoć AI.</p>
+    <div class="hero-ctas center">
+      <a href="#hero" class="btn btn-primary btn-lg">Započni</a>
+      <a href="#preview" class="btn btn-ghost-light btn-lg">Pridruži se ranom pristupu</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#hero" class="logo"><span class="logo-mark">🥑</span><span class="logo-text">EAT<em>TODAY</em></span></a>
+      <p class="footer-tag">Slikaj frižider. Jedi danas. Manje otpada.</p>
+    </div>
+    <div>
+      <p class="footer-title">Aplikacija</p>
+      <a href="#demo">Kako radi</a>
+      <a href="#why">Funkcije</a>
+      <a href="#premium">Premium</a>
+    </div>
+    <div>
+      <p class="footer-title">Kompanija</p>
+      <a href="#about">O nama</a>
+      <a href="#sustainability">Održivost</a>
+      <a href="#for-you">Za tebe</a>
+    </div>
+    <div>
+      <p class="footer-title">Prati nas</p>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 EAT TODAY. Sva prava zadržana.</p>
+    <p>Aplikacija je u fazi ranog pristupa.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
