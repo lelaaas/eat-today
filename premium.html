@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium — EAT TODAY</title>
+<meta name="description" content="EAT TODAY Premium — personalizovani planovi obroka, napredna analiza nutricije, neograničeno skeniranje i AI preporuke prilagođene tvojim ciljevima.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥑</text></svg>">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner container">
+    <a href="index.html" class="logo" aria-label="EAT TODAY — početna">
+      <span class="logo-mark">🥑</span>
+      <span class="logo-text">EAT<em>TODAY</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Glavna navigacija">
+      <a href="index.html#demo">Kako radi</a>
+      <a href="index.html#why">Funkcije</a>
+      <a href="index.html#for-you">Za tebe</a>
+      <a href="premium.html" class="current">Premium</a>
+      <a href="about.html">O nama</a>
+      <a href="index.html#final-cta" class="btn btn-primary btn-sm nav-cta">Započni</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Otvori meni" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg ph-1"></div>
+  <div class="page-hero-bg ph-2"></div>
+  <div class="container">
+    <span class="kicker">Premium</span>
+    <h1 class="reveal">Otključaj punu moć<br><span class="highlight">EAT TODAY.</span></h1>
+    <p class="sub reveal delay-1">Premium plan je za sve koji žele više — personalizovane nedeljne planove, naprednu analizu nutricije i AI preporuke koje se prilagođavaju tvojim ciljevima.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Planovi</span>
+      <h2>Besplatno za početak. Premium za više.</h2>
+      <p>Kreni besplatno, a Premium nadogradi iskustvo kad bude izašao.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <span class="price-tier">Besplatno</span>
+        <p class="price-value">0 <span>RSD</span></p>
+        <p class="price-note">Zauvek besplatno</p>
+        <ul>
+          <li>✓ Osnovno AI prepoznavanje sastojaka</li>
+          <li>✓ Osnovni recepti</li>
+          <li>✓ Pametna lista za kupovinu</li>
+        </ul>
+        <a href="index.html#final-cta" class="btn btn-outline">Započni besplatno</a>
+      </div>
+      <div class="price-card price-card-premium reveal delay-1">
+        <div class="premium-flag">Najpopularnije</div>
+        <span class="price-tier">Premium</span>
+        <p class="price-value">Uskoro <span>dostupno</span></p>
+        <p class="price-note">Cena će biti objavljena pri lansiranju</p>
+        <ul>
+          <li>✓ Personalizovani nedeljni planovi obroka</li>
+          <li>✓ Napredna analiza nutricije</li>
+          <li>✓ Napredne AI preporuke</li>
+          <li>✓ Neograničeno skeniranje</li>
+          <li>✓ Recepti prilagođeni ličnim ciljevima</li>
+        </ul>
+        <a href="#rani-pristup" class="btn btn-primary">Pridruži se ranom pristupu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Sa Premium planom</span>
+      <h2>Šta dobijaš dodatno</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">📅</div>
+        <h3>Planovi obroka</h3>
+        <p>Cela nedelja isplanirana unapred — doručak, ručak i večera.</p>
+      </div>
+      <div class="why-card reveal delay-1">
+        <div class="why-icon">📊</div>
+        <h3>Napredna nutricija</h3>
+        <p>Detaljan uvid u kalorije, proteine, ugljene hidrate i masti.</p>
+      </div>
+      <div class="why-card reveal delay-2">
+        <div class="why-icon">🤖</div>
+        <h3>Napredne AI preporuke</h3>
+        <p>Preporuke koje uče iz tvojih izbora i prilagođavaju se tebi.</p>
+      </div>
+      <div class="why-card reveal delay-3">
+        <div class="why-icon">♾️</div>
+        <h3>Neograničeno skeniranje</h3>
+        <p>Slikaj frižider kad god hoćeš, bez ograničenja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EARLY ACCESS CTA -->
+<section class="final-cta" id="rani-pristup">
+  <div class="container">
+    <h2>Budi prvi koji će isprobati<br><span class="highlight">EAT TODAY Premium.</span></h2>
+    <p>Ostavi svoj email i obavestićemo te čim Premium bude dostupan.</p>
+    <form class="cta-form" id="earlyForm">
+      <input type="email" name="email" placeholder="Tvoj email" required aria-label="Tvoj email">
+      <button type="submit" class="btn btn-primary btn-lg">Prijavi se</button>
+    </form>
+    <p class="form-success" id="formSuccess">✓ Hvala! Na listi si za rani pristup.</p>
+    <p class="form-note">Bez spam poruka. Samo obaveštenje o lansiranju.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="logo"><span class="logo-mark">🥑</span><span class="logo-text">EAT<em>TODAY</em></span></a>
+      <p class="footer-tag">Slikaj frižider. Jedi danas. Manje otpada.</p>
+    </div>
+    <div>
+      <p class="footer-title">Aplikacija</p>
+      <a href="index.html#demo">Kako radi</a>
+      <a href="index.html#why">Funkcije</a>
+      <a href="premium.html">Premium</a>
+    </div>
+    <div>
+      <p class="footer-title">Kompanija</p>
+      <a href="about.html">O nama</a>
+      <a href="index.html#sustainability">Održivost</a>
+      <a href="index.html#for-you">Za tebe</a>
+    </div>
+    <div>
+      <p class="footer-title">Prati nas</p>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 EAT TODAY. Sva prava zadržana.</p>
+    <p>Aplikacija je u fazi ranog pristupa.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
